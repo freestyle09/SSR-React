@@ -2,9 +2,9 @@
   "name": "ssr-react",
   "version": "1.0.0",
   "description": "Server Side Rendering using express/node and React",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "start-dev": "NODE_ENV=development webpack -w & NODE_ENV=development node app.js"
+    "start-dev": "NODE_ENV=development webpack -w & NODE_ENV=development node server.js"
   },
   "repository": {
     "type": "git",

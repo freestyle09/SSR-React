@@ -53,7 +53,7 @@ const serverConfig = {
   target: 'node',
   output: {
     path: __dirname,
-    filename: 'app.js',
+    filename: 'server.js',
     libraryTarget: 'commonjs2'
   },
   devtool: 'cheap-module-source-map',
