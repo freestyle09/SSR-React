@@ -1,38 +1,34 @@
 {
   "name": "ssr-react",
-  "version": "1.0.0",
-  "description": "Server Side Rendering using express/node and React",
-  "main": "server.js",
-  "scripts": {
-    "start-dev": "NODE_ENV=development webpack -w & NODE_ENV=development node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/freestyle09/SSR-React.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/freestyle09/SSR-React/issues"
-  },
-  "homepage": "https://github.com/freestyle09/SSR-React#readme",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
+    "escape-string-regexp": "^2.0.0",
     "express": "^4.17.1",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.1",
+    "react-ssr-scripts": "2.1.4"
   },
-  "devDependencies": {
-    "autoprefixer": "^9.6.1",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^8.0.6",
-    "babel-preset-react-app": "^9.0.0",
-    "css-loader": "^3.1.0",
-    "extract-text-webpack-plugin": "^4.0.0-beta.0",
-    "file-loader": "^4.1.0",
-    "mini-css-extract-plugin": "^0.8.0",
-    "postcss-loader": "^3.0.0",
-    "webpack": "^4.38.0",
-    "webpack-cli": "^3.3.6"
+  "scripts": {
+    "start": "react-ssr-scripts start",
+    "build": "react-ssr-scripts build",
+    "test": "react-ssr-scripts test",
+    "eject": "react-ssr-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

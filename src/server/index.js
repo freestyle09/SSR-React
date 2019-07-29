@@ -1,27 +1,14 @@
+import path from 'path';
 import express from 'express';
-import React from 'react';
-import { renderToString } from 'react-dom/server';
-import App from '../shared/App';
 
+import htmlMiddleware from './middleware/html';
+import renderMiddleware from './middleware/render';
+
+const publicPath = path.join(__dirname, '/public');
 const app = express();
 
-app.use(express.static('public'));
+app.use(express.static(publicPath));
+app.use(htmlMiddleware());
+app.use(renderMiddleware());
 
-app.get('*', (req, res) => {
-  res.send(`
-      <!DOCTYPE html>
-      <head>
-        <title>Universal React</title>
-        <link rel="stylesheet" href="/css/main.css">
-        <script src="/bundle.js" defer></script>
-      </head>
-      <body>
-        <div id="root">${renderToString(<App />)}</div>
-      </body>
-    </html>
-  `);
-});
-
-app.listen(process.env.PORT || 3000, () => {
-  console.log('Server is listening');
-});
+export default app;
