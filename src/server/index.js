@@ -11,4 +11,8 @@ app.use(express.static(publicPath));
 app.use(htmlMiddleware());
 app.use(renderMiddleware());
 
+// app.get('/dane', (req, res) => {
+//   return res.send('Hello world');
+// });
+
 export default app;

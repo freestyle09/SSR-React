@@ -14,6 +14,10 @@ if (module.hot) {
   });
 }
 
+app.get('/dane', (req, res) => {
+  res.send('Hello World');
+});
+
 express()
   .use((req, res) => app.handle(req, res))
   .listen(process.env.PORT || 3000, () => {

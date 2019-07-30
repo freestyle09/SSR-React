@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
 
 class Contact extends Component {
-  state = {};
+  state = {
+    name: 'Stasek'
+  };
   render() {
     return (
       <div>
@@ -23,8 +25,28 @@ class Contact extends Component {
         <img src='Screenshot_2.png' alt='Zdjęcia' />
         <img src='Screenshot_2.png' alt='Zdjęcia' />
         <div>Józek dostołeś A1</div>
+        <button onClick={this.sendEmail}>Send</button>
       </div>
     );
+  }
+
+  sendEmail = () => {
+    fetch('/siema', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: 'Józef'
+    })
+      .then(resp => resp.json())
+      .then(data => console.log(data));
+  };
+
+  componentDidMount() {
+    fetch('https://jsonplaceholder.typicode.com/todos/1')
+      .then(resp => resp.json())
+      .then(data => console.log(data));
   }
 }
 
