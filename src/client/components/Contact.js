@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
+import { Helmet } from 'react-helmet';
 
 class Contact extends Component {
   state = {};
   render() {
     return (
       <div>
+        <Helmet>
+          <meta charSet='utf-8' />
+          <title>Kontakt ze strony</title>
+        </Helmet>
         <h1>Contact works</h1>
         <div>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex neque perferendis autem ducimus tempore aliquid
@@ -16,6 +21,8 @@ class Contact extends Component {
           necessitatibus numquam est vero dolorem. Officiis totam tenetur, rerum vel voluptate aut quisquam illum sit.
         </div>
         <img src='Screenshot_2.png' alt='Zdjęcia' />
+        <img src='Screenshot_2.png' alt='Zdjęcia' />
+        <div>Józek dostołeś A1</div>
       </div>
     );
   }
