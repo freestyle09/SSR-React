@@ -19,7 +19,7 @@ class App extends Component {
           <Route path='/contact' strict exact component={Contact} />
           <Route path='/404' strict exact component={NotFound} />
 
-          <Redirect to='/404' />
+          {/* <Redirect to='/404' /> */}
         </Switch>
       </div>
     );

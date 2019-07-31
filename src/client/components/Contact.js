@@ -21,8 +21,6 @@ class Contact extends Component {
           necessitatibus numquam est vero dolorem. Officiis totam tenetur, rerum vel voluptate aut quisquam illum sit.
         </div>
         <img src='Screenshot_2.png' alt='Zdjęcia' />
-        <img src='Screenshot_2.png' alt='Zdjęcia' />
-        <div>Józek dostołeś A1</div>
       </div>
     );
   }
